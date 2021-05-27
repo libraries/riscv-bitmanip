@@ -16,4 +16,4 @@ COPY --from=builder /opt/riscv64b /opt/riscv64b
 RUN apt-get update && apt-get clean
 ENV RISCV /opt/riscv64b
 ENV PATH "${PATH}:${RISCV}/bin"
-CMD ["riscv64-unknown-linux-gnu-gcc", "--version"]
+CMD ["riscv64-unknown-elf-gcc", "--version"]
